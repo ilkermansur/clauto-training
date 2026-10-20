@@ -197,6 +197,7 @@
 
 /// Kapanış sayfası.
 #let finale(title: [Teşekkürler], subtitle: none, body) = page(header: none, footer: none, margin: (x: 2.3cm, y: 2.4cm))[
+  #set par(justify: false)
   #v(1fr)
   #text(font: fonts.heading, weight: "bold", size: 30pt, fill: clr.green, title)
   #v(-8pt)
