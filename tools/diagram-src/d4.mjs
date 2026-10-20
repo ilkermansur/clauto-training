@@ -1,0 +1,17 @@
+import { C, text, arrow, box, diamond, save } from '../exlib.mjs';
+const D = new URL('../../diagrams/', import.meta.url).pathname;
+const els = [];
+els.push(box(0, 112, 120, 60, '1001', { size: 28 }));
+els.push(arrow([[126, 142], [168, 142]]));
+els.push(diamond(172, 97, 110, 90, { fill: C.fillBlue }));
+els.push(text(227, 142, 'type?', { size: 22, align: 'center', middle: true }));
+els.push(arrow([[262, 118], [300, 50], [335, 42]], { round: true }));
+els.push(arrow([[262, 166], [300, 234], [335, 242]], { round: true }));
+els.push(text(282, 52, 'str', { size: 20, stroke: C.green, align: 'right' }));
+els.push(text(282, 218, 'int', { size: 20, stroke: C.green, align: 'right' }));
+els.push(box(340, 2, 250, 80, '"1001" + "1"\n= "10011"', { fill: C.fillYellow, round: true, size: 22 }));
+els.push(box(340, 202, 250, 80, '1001 + 1\n= 1002', { fill: C.fillGreen, round: true, size: 22 }));
+els.push(text(600, 30, 'join\ntext', { size: 18, stroke: C.gray }));
+els.push(text(600, 230, 'do\nmath', { size: 18, stroke: C.gray }));
+els.push(text(60, 220, 'same digits,\ndifferent behavior', { size: 20, stroke: C.red, align: 'center' }));
+save(D + 'why-types.excalidraw', els);

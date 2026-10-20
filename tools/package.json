@@ -1,0 +1,12 @@
+{
+  "name": "clauto-diagrams",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "diagrams": "node excalidraw2svg.mjs ../diagrams"
+  },
+  "dependencies": {
+    "fontkit": "^2.0.4",
+    "roughjs": "^4.6.6"
+  }
+}
